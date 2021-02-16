@@ -10,5 +10,7 @@ int main() {
         s=x+s;
         s.pop_back();
     }
+
     cout << "No" << endl;
+    
 }
