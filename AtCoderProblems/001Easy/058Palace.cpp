@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include <iostream>
 #include <algorithm>
 using namespace std;
@@ -20,3 +21,6 @@ int main() {
     cout << ansi << endl;
     return 0;
 }
+=======
+git test2
+>>>>>>> d2fec036e87faf045f0a84ae42aeec9f1e6fb1c4
