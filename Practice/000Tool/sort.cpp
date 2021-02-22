@@ -6,12 +6,13 @@ template<class T> inline bool chmax(T& a, T b) { if (a < b) { a = b; return 1; }
 template<class T> inline bool chmin(T& a, T b) { if (a > b) { a = b; return 1; } return 0; }
 const long long INF = 1LL << 60;
 int main() {
-    int n; cin >> n;
-    int ans=1,ma=0;
-    for(int k=0; k < n; ++k){
-        int a; cin >>a;
-        if(ma-a>1) {ans=0; break;}
-        ma=max(ma,a);
+    int n,k; cin >> n>>k;
+    vector<ll> h(n);
+    rep(i,n) cin >> h[i];
+    sort(h.begin(),h.end());
+    ll mi=INF;
+    for(int i=0; i < n-k+1; ++i){
+        chmin(mi,h[i+k-1]-h[i]);
     }
-    cout << (ans ? "Yes" : "No") << endl;
+    cout << mi << endl;
 }
