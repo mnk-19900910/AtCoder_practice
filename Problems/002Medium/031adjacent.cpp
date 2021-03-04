@@ -7,10 +7,15 @@ template<class T> inline bool chmin(T& a, T b) { if (a > b) { a = b; return 1; }
 const long long INFll = 1LL << 60;
 const int INF = 100100100;
 int main() {
-    ll n,m; cin >> n>>m;
-    if(n==2||m==2){cout << 0 << endl; return 0;}
-    if(n==1&&m==1){cout << 1 << endl; return 0;}
-    if(n==1&&m>=3){cout << m-2 << endl; return 0;}
-    if(m==1&&n>=3){cout << n-2 << endl; return 0;}
-    cout << (m-2)*(n-2) << endl;
+    ll n; cin >> n;
+    ll d=0,d2=0,d4=0;
+    for(ll i=0; i < n; ++i){
+        ll a; cin >> a;
+        if(a%4==0) d4++;
+        else if(a%2==0) d2++;
+        else d++;
+    }
+    if(d2)d++;
+    if(d-1<=d4){cout << "Yes" << endl; return 0;}
+    else {cout << "No" << endl; return 0;}
 }
