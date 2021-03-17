@@ -6,7 +6,7 @@ int main() {
     int n;
     cin >> n;
     int a;
-    set<int> x; // insert するときに重複を取り除いてくれます
+    set<int> x;
     rep(i,n) {
         cin >> a;
         if(x.count(a)!=1) x.insert(a);
